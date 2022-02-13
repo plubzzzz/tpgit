@@ -12,6 +12,7 @@ Vagrant.configure("2") do |config|
     useradd --shell /bin/bash --create-home alice || true
     useradd --shell /bin/bash --create-home bob || true
     useradd --shell /bin/bash --create-home carol || true
+    echo patrick:azerty123 | chpasswd
     echo alice:1234 | chpasswd
     echo bob:azerty | chpasswd
     echo carol:secret | chpasswd
