@@ -32,6 +32,7 @@ Vagrant.configure("2") do |config|
     b.vm.network "private_network", ip: "192.168.57.3"
     b.vm.hostname = "srv"
     config.vm.network :forwarded_port, host: 80, guest: 8080
+    
 
     b.vm.provision "shell", inline: <<-SHELL
       apt-get -y install apache2 ruby php
